@@ -1,0 +1,16 @@
+# Tooling configuration only. Runtime dependencies are pinned in requirements.txt.
+# The project is imported as `src.<layer>` from the repository root; there is
+# intentionally no build backend so that no install step is required.
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+    "physics: validates analytic quantum-mechanical predictions against simulation",
+    "slow: long-running Monte Carlo sweeps (deselect with '-m \"not slow\"')",
+]
+filterwarnings = [
+    "error::DeprecationWarning:src.*",
+]

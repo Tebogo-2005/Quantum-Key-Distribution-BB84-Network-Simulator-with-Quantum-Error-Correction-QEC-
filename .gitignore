@@ -1,0 +1,38 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Simulation outputs
+results/
+outputs/
+figures/
+*.png
+*.svg
+*.pdf
+!docs/**/*.png
+
+# Local configuration and secrets
+.env
+.env.*
+configs/local.*.toml
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,17 @@
+# BB84 QKD network simulator -- direct dependencies.
+#
+# Requires CPython >= 3.11 (PennyLane 0.45.x requirement). Validated on 3.12.
+#
+#   python -m venv .venv && . .venv/bin/activate
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+#
+# PennyLane 0.45 requires NumPy >= 2.0, so the NumPy pin below is mandatory:
+# downgrading it to the 1.26 series breaks `import pennylane`.
+# Every direct dependency is pinned exactly; freeze the resolved transitive
+# graph separately with `pip freeze > requirements.lock.txt` when needed.
+
+pennylane==0.45.1
+numpy==2.3.5
+matplotlib==3.11.2
+pytest==9.1.1
